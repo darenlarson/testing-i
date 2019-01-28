@@ -2,7 +2,7 @@
   "name": "testing-i",
   "version": "1.0.0",
   "description": "In this project, you will demonstrate proficiency by writing unit tests and production code to satisfy the Minimum Viable Product described below.",
-  "main": "data.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --watch"
   },
