@@ -31,7 +31,9 @@ function success(item) {
     let newDurability;
     let newEnhancement;
     let newName;
+
     // New durability
+    newDurability = selectedItem.durability;
 
     // New enhancement level
     if (selectedItem.enhancement < 15) {
@@ -52,15 +54,17 @@ function success(item) {
 
     // New name
     if (newEnhancement > 0) {
-        newName = `[+${newEnhancement} ${selectedItem.name}]`;
+        newName = `[+${newEnhancement}] ${selectedItem.name}`;
     } else {
         newName = selectedItem.name;
     }
 
-    selectedItem = {
+    let updatedItem = {
         ...selectedItem,
         name: newName,
         enhancement: newEnhancement,
         durability: newDurability
     }
+
+    return updatedItem;
 };
